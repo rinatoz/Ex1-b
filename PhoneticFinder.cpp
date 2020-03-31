@@ -59,7 +59,7 @@ namespace phonetic {
 				char str[i- j + 1];
 				memset(str, 0, i - j + 1);
 				text.copy(str, i - j, j);
-				if (similiar(str, word)==0)
+				if (similiar(str, word))
 					return str;
 				j = i + 1;
 			}
