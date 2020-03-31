@@ -54,7 +54,7 @@ namespace phonetic {
 			throw "uncorrect input";
 
 		while (i < text.length()) {
-			if (text.at(i) == ' ' || i == text.length() - 1) 
+			if (text.at(i) == ' ' || i == text.length() - 1|| i==0) 
 			{
 				char str[i- j + 1];
 				memset(str, 0, i - j + 1);
