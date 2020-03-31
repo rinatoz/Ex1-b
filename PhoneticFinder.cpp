@@ -39,7 +39,7 @@ namespace phonetic {
 		int length2 = s2.length();
 		if (length1!=length2)
 			return false;
-		if (s1.compare(s2))
+		if (s1.compare(s2)==0)
 			return true;
 		else
 			return false;
@@ -48,9 +48,9 @@ namespace phonetic {
 	string find(string temp, string word) {
 		string text = temp + '\0';
 		int i = 0, j = 0;
-		if (word.compare("")|| word.compare(" "))
+		if (word.compare("")==0|| word.compare(" ")==0)
 			throw "uncorrect input";
-		if (text.compare("")|| text.compare(" "))
+		if (text.compare("")==0|| text.compare(" ")==0)
 			throw "uncorrect input";
 
 		while (i < text.length()) {
@@ -59,7 +59,7 @@ namespace phonetic {
 				char str[i- j + 1];
 				memset(str, 0, i - j + 1);
 				text.copy(str, i - j, j);
-				if (similiar(str, word))
+				if (similiar(str, word)==0)
 					return str;
 				j = i + 1;
 			}
