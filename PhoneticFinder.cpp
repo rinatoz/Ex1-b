@@ -10,7 +10,7 @@ namespace phonetic {
 		for (int i = 0; i < w.length(); i++)
 		{
 			char l = tolower(w.at(i));
-		    if (l == 'i' || l == 'y')
+		        if (l == 'i' || l == 'y')
 			str += '1';
 			else if (l == 'o' || l == 'u')
 			str += '2';
@@ -24,7 +24,7 @@ namespace phonetic {
 			str += '6';
 			else if (l == 'b' || l == 'f' || l == 'p')
 			str += '7';
-			if (l == 'v' || l == 'w')
+			else if (l == 'v' || l == 'w')
 			str += '8';
 			else
 			str += l;
@@ -54,7 +54,7 @@ namespace phonetic {
 			throw "uncorrect input";
 
 		while (i < text.length()) {
-			if (text.at(i) == ' ' || i == text.length() - 1|| i==0) 
+			if (text.at(i) == ' ' || i == text.length() - 1) 
 			{
 				char str[i- j + 1];
 				memset(str, 0, i - j + 1);
@@ -71,9 +71,4 @@ namespace phonetic {
 
 
 
-	int main()
-	{
-		string g = find("dond", "dont");
-		cout << g;
-	}
 }
